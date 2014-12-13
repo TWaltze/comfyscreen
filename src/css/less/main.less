@@ -1,0 +1,39 @@
+.main {
+	background: #fff;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	&-header {
+		background: @grey;
+		padding: 10px;
+
+		.filter-genre {
+			text-align: center;
+			color: @grey-darkest;
+		}
+
+		.filter-order {
+			color: @grey-dark;
+			text-align: right;
+
+			li {
+				padding: 0 5px;
+			}
+
+			.active {
+				color: @accent;
+			}
+		}
+	}
+
+	.media-stream {
+		.media-tile {
+			margin: 20px;
+			display: inline-block;
+		}
+
+		.loader-container {
+			margin-top: 150px;
+		}
+	}
+}

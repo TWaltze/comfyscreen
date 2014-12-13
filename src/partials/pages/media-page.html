@@ -1,0 +1,20 @@
+<div class="media-page grid grid-wrap grid-top">
+	<h1 class="thin block-full">{{media.title}}</h1>
+	<h5 class="thin block-full">{{media.score}} of 10 / {{media.year}} / {{media.runtime}} mins / {{media.genres.join(', ')}}</h5>
+	<div>
+		<media-tile class="media-tile--large" media="media"></media-tile>
+		<a ng-href="{{media.trailer}}" ng-if="media.trailer" class="button button--full">Trailer</a>
+	</div>
+	<div class="media__info block-1">
+		<p class="summary">
+			{{media.overview}}
+		</p>
+		<ul class="seasons list--hor" ng-if="media.seasons">
+			<li>Season</li>
+			<li><a href="" class="active">1</a></li>
+		</ul>
+		<ul class="episodes" ng-if="media.seasons">
+			<li><a href="">Episode 1</a></li>
+		</ul>
+	</div>
+</div>

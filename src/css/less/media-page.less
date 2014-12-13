@@ -1,0 +1,50 @@
+.media-page {
+	padding: 15px;
+
+	h1 {
+		margin-bottom: 5px;
+	}
+
+	h5 {
+		margin-bottom: 15px;
+	}
+
+	.media__info {
+		margin-left: 20px;
+
+		.summary {
+			max-width: 400px;
+			line-height: 1.5em;
+		}
+
+		.seasons {
+			li {
+				padding: 10px 10px 10px 0;
+
+				a {
+					color: @grey-dark;
+
+					&.active {
+						color: @accent;
+					}
+				}
+			}
+		}
+
+		.episodes {
+			max-height: 300px;
+			overflow-y: auto;
+
+			li {
+				&:nth-child(even) {
+					background: @grey;
+				}
+
+				a {
+					display: block;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}

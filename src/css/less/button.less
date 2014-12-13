@@ -1,0 +1,36 @@
+.button {
+	.create-button(@accent);
+
+	&--green {
+		.create-button(@green);
+	}
+
+	&--small {
+		font-size: .8rem;
+	}
+
+	&--medium {
+		font-size: 2rem;
+	}
+
+	&--large {
+		font-size: 3rem;
+	}
+
+	&--full {
+		width: 100%;
+	}
+}
+
+.create-button(@color) {
+	padding: .6em 1em;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	transition: background-color ease .2s;
+	background-color: @color;
+
+	&:hover {
+		background-color: darken(@color, 10%)
+	}
+}

@@ -1,0 +1,26 @@
+*,
+*:after,
+*:before { .box-sizing(); }
+
+html {
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html, body {
+	background: @bg;
+	font-family: @fontFamily;
+	font-size: @fontSize;
+	color: @fontColor;
+	overflow: hidden;
+	min-width: 875px;
+}
+
+body,
+.wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}

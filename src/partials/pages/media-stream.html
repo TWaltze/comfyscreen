@@ -1,0 +1,14 @@
+<header class="main-header grid grid-center">
+	<h2 class="thin block-1">{{title}}</h2>
+	<ul class="filter-genre block-2 list--hor">
+		<li><a href="">Action & Adventure <i class="fa fa-angle-down"></i></a></li>
+	</ul>
+	<ul class="filter-order block-1 list--hor">
+		<li><a href="" ng-click="predicate = 'score'" ng-class="{'active': predicate == 'score'}">Popular</a></li>
+		<li><a href="" ng-click="predicate = 'year'" ng-class="{'active': predicate == 'year'}">Recent</a></li>
+	</ul>
+</header>
+<div class="media-stream grid grid-wrap grid-center grid-justify--center">
+	<loader ng-show="!mediaList"></loader>
+	<media-tile class="ng-fadeInDown" tooltip="true" media="media" ng-repeat="media in mediaList | orderBy:predicate:true"></media-tile>
+</div>

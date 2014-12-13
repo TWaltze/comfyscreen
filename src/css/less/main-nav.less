@@ -1,0 +1,39 @@
+.main-nav {
+	width: @navWidth;
+	min-width: @navWidth;
+	background: @grey-darkest;
+	color: @grey-dark;
+
+	ul {
+		text-align: center;
+
+		li {
+			a {
+				padding: 20px 10px;
+				display: block;
+
+				&:hover {
+					color: #fff;
+				}
+
+				&.active {
+					color: @accent;
+				}
+			}
+
+			i {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			&.logo {
+				padding: 20px 0;
+				color: #fff;
+				background: @accent;
+				font-weight: 600;
+				font-size: 1.5rem;
+				text-transform: lowercase;
+			}
+		}
+	}
+}

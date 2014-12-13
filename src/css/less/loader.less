@@ -1,0 +1,67 @@
+.loader {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		width: 50px;
+		height: 50px;
+	}
+
+	&:before {
+		left: 0;
+		background-color: @accent;
+		animation: loader-left 1s infinite ease;
+	}
+
+	&:after {
+		right: 0;
+		background-color: lighten(@accent, 20%);
+		animation: loader-right 1s infinite ease;
+	}
+}
+
+.loader-container {
+	position: relative;
+	height: 100px;
+	width: 100%;
+}
+
+@keyframes loader-left {
+	0% {
+		transform: scale(0.5);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.5);
+	}
+}
+
+@keyframes loader-right {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,39 @@
+.left-panel-container {
+	position: absolute;
+	top: 0;
+	right: -100%;
+	bottom: 0;
+	width: 100%;
+	z-index: 3000;
+
+	&.active {
+		right: 0;
+
+		.left-panel {
+			right: 0;
+
+			&__overlay {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: @navWidth;
+				background: #000;
+				opacity: 0.7;
+				z-index: 100;
+			}
+		}
+	}
+}
+
+.left-panel {
+	position: absolute;
+	top: 0;
+	right: -100%;
+	bottom: 0;
+	width: 75%;
+	z-index: 200;
+	overflow-y: auto;
+	background-color: #fff;
+	transition: right .5s;
+}

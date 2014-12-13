@@ -1,0 +1,63 @@
+/* Global Variables */
+@gutter: 10px;
+@columns: 12;
+
+.grid {
+	display: flex;
+
+	&-top {
+		&:extend(.grid);
+
+		align-items: flex-start;
+	}
+
+	&-center {
+		&:extend(.grid);
+
+		align-items: center;
+	}
+
+	&-bottom {
+		&:extend(.grid);
+
+		align-items: flex-end;
+	}
+
+	&-wrap {
+		flex-flow: row wrap;
+	}
+
+	&-justify--center {
+		justify-content: center;
+	}
+
+	&-gutter {
+		&:extend(.grid);
+
+		[class*="block-"] {
+			margin-right: @gutter;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.block-auto {
+	flex: 1 auto;
+}
+
+.block-full {
+	flex: 1 100%;
+}
+
+.generate-columns(@columns);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+	.block-@{i} {
+		flex: @i;
+	}
+
+	.generate-columns(@n, (@i + 1));
+}

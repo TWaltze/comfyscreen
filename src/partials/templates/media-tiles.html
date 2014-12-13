@@ -1,0 +1,17 @@
+<div class="media-tile media-tile--tooltip">
+	<div class="media-tile__thumbnail">
+		<i class="thumbnail__loading fa fa-refresh fa-spin"></i>
+		<img ng-src="{{media.thumbnail}}" />
+	</div>
+	<div class="media-tile__tooltip-container" ng-class="{'left': leftSide}" ng-if="tooltip">
+		<div class="media-tile__tooltip">
+			<h5 class="title"><a href="" toggle-left-panel="media.imdb">{{media.title}}</a></h5>
+			<span class="meta">{{media.score}} / {{media.year}} / {{media.genres.join(', ')}}</span>
+			<p class="summary">{{media.summary}}</p>
+		</div>
+	</div>
+	<div class="media-tile__actions">
+		<a href="" class="play"><i class="fa fa-play-circle-o"></i></a>
+		<a href="" class="favorite"><i class="fa fa-heart-o"></i></a>
+	</div>
+</div>
